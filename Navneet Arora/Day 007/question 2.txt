@@ -1,0 +1,16 @@
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int count=0;
+        vector<int>::iterator i;
+        for(auto i:nums){
+            if(i!=0){
+                nums[count]=i;
+                count++;
+            }
+        }
+        for(int i=count;i<nums.size();i++){
+           nums[i]=0; 
+        }
+    }
+};
